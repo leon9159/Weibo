@@ -4,12 +4,12 @@ from scrapy import Spider, Request, FormRequest
 from weibo.items import WeiboItem
 
 
-class SearchSpider(Spider):
+class weiboSearchSpider(Spider):
     name = "search"
     allowed_domains = ["weibo.cn"]
     search_url = 'http://weibo.cn/search/mblog'
     max_page = 200
-    keywords = ['000001']
+    keywords = ['巴黎圣母院大火']
 
     def start_requests(self):
         for keyword in self.keywords:
